@@ -15,9 +15,22 @@
 
     <properties>
         <version.ulid>8.2.0</version.ulid>
-        <version.grpc-java>1.25.0</version.grpc-java>
-        <version.protoc>3.10.0</version.protoc>
+        <version.keycloak-grpc>0.2.0</version.keycloak-grpc>
+        <version.midpoint-grpc>0.5.0</version.midpoint-grpc>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>keycloak-grpc</id>
+            <name>keycloak-grpc Releases</name>
+            <url>https://raw.githubusercontent.com/openstandia/keycloak-grpc/mvn-repo/</url>
+        </repository>
+        <repository>
+            <id>midpoint-grpc</id>
+            <name>midpoint-grpc Releases</name>
+            <url>https://raw.githubusercontent.com/openstandia/midpoint-grpc/mvn-repo/</url>
+        </repository>
+    </repositories>
 
     <dependencies>
         <dependency>
@@ -26,24 +39,27 @@
             <version>${version.ulid}</version>
         </dependency>
         <dependency>
-            <groupId>io.grpc</groupId>
-            <artifactId>grpc-netty-shaded</artifactId>
-            <version>${version.grpc-java}</version>
+            <groupId>jp.openstandia.keycloak.grpc</groupId>
+            <artifactId>keycloak-grpc-admin-services</artifactId>
+            <version>${version.keycloak-grpc}</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>io.grpc</groupId>
-            <artifactId>grpc-protobuf</artifactId>
-            <version>${version.grpc-java}</version>
+            <groupId>jp.openstandia.keycloak.grpc</groupId>
+            <artifactId>keycloak-grpc-service-spi</artifactId>
+            <version>${version.keycloak-grpc}</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>io.grpc</groupId>
-            <artifactId>grpc-stub</artifactId>
-            <version>${version.grpc-java}</version>
+            <groupId>jp.openstandia.midpoint.grpc</groupId>
+            <artifactId>midpoint-grpc-self-services</artifactId>
+            <version>${version.midpoint-grpc}</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>com.google.protobuf</groupId>
-            <artifactId>protobuf-java</artifactId>
-            <version>${version.protoc}</version>
+            <groupId>jp.openstandia.midpoint.grpc</groupId>
+            <artifactId>midpoint-grpc-client-spi</artifactId>
+            <version>${version.midpoint-grpc}</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>

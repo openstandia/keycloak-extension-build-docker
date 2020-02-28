@@ -16,7 +16,7 @@
     <properties>
         <version.ulid>8.2.0</version.ulid>
         <version.keycloak-grpc>0.2.0</version.keycloak-grpc>
-        <version.midpoint-grpc>0.5.0</version.midpoint-grpc>
+        <version.midpoint-grpc>0.8.1</version.midpoint-grpc>
     </properties>
 
     <repositories>

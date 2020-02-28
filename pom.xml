@@ -8,7 +8,7 @@
     <packaging>pom</packaging>
 
     <properties>
-        <version.keycloak>8.0.1</version.keycloak>
+        <version.keycloak>9.0.0</version.keycloak>
     </properties>
 
     <dependencyManagement>
